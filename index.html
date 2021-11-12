@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -8,22 +9,23 @@
     <h1>hello world</h1>
       <p>Before the script...</p>
 
-  <script>
+<!--   <script>
     alert( 'Hello, world!' );
   </script>
-
+ -->
   <p>...After the script.</p>
-   submit = "true";
-   <input value="entre com o valor">
-   <input type="submit" value="Submit">
+   
+    <input type="text" placeholder="Type something..." id="myInput">
+    <button type="button" onclick="getInputValue();">Get Value</button>
     
     <script>
-    var val = document.getElementById("value").value;
-    if (val > 0) 
-    {
-        alert("your number plus ten is" + String.valueOf(val));
-        submit = "false";
-    }
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+            
+            // Displaying the value
+            alert("Your number plus 43 is  " + (parseInt(inputVal,10) + 43).toString() );
+        }
     </script>
   </body>
 </html>
